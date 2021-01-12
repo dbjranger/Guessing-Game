@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <!-- Is not rendered in the browser but is there to provide meta data about the content we are showing -->
-  <title>Class 201 Day 1</title>
-  <style>
-    /* starts with an element to select, key value pairs for speicific element properties*/
-    body {
-      color: rgb(0, 255, 255);
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      text-align: center;
-    }
-
-  </style>
-</head>
-
-<body>
-  <!-- Includes all the things that we see on the screen -->
-  <h1>Class 1 Lab</h1>
+  <head>
+    <!-- Is not rendered in the browser but is there to provide meta data about the content we are showing -->
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
   
-
-  <script>
+  <body>
+    <!-- Includes all the things that we see on the screen -->
+    <h1>Don Bandy</h1>
     
-    // Get user first and last name
-         var fName = prompt('What is your first name?');
-    var lName = prompt('What is your last name?');
-
-    alert(`Well hello there ${fName} ${lName}!`);
-
-     // log data to your developer console
-     console.log(`The users name is ${fName} ${lName}`);
-
+    <p>I am from San Diego, CA and enjoy spending time at the beach.  I wish I had studied Computer Science in college.
+          I'm at Code Fellows learning how to be a Software Developer
+    </p>
+  
+    <h3> Education History </h3>
+    <ul>
+      <li>
+        University of California Los Angeles (UCLA)
+      </li>
+      <li>
+       San Diego State University (SDSU)
+      </li>
+    </ul>
     
-    // Get users favorite food and drink
-    var favoriteFood = prompt('What is your favorite food?');
-    var favoriteDrink = prompt('What is your favorite drink?');
-
-    alert(`Ok Awesome ${fName} ${lName}.  So your favorite food is ${favoriteFood} and your favorite drink is ${favoriteDrink}!`);
-
-    console.log(`The users favorite food and drink are ${favoriteFood} and ${favoriteDrink}`);
- 
-  </script>
-</body>
-
-</html>
+      <h3> Job Experience </h3>
+    <ul>
+      <li>
+        US Army Infantryman 11C
+      </li>
+      <li>
+       ScrumMaster and Product Owner certified
+      </li>
+        <li>
+       Aspiring Software Developer
+      </li>
+    </ul>
+     
+    
+  
+  
+  
+    <script src="app.js"></script>
+  </body>
