@@ -1,7 +1,36 @@
 'use strict';
 
+for (var numberOfGuesses = 0; numberOfGuesses < 4; numberOfGuesses ++) {
+    
+    var userGuess = prompt("Let's play a game.  I'm thinking of a number between 1-10.  What number am I thinking of?")
+    
+    
+if (userGuess == 5) {
+        alert("Holy smokes!  How in the world did you know that?")
+        numberOfGuesses += 5;
+    } else if (userGuess > 5) {
+        alert("Nope!  Too high.  Guess a lower number.")
+    } else if (userGuess < 5) {
+        alert("Nope!  Too low.  Guess a higher number")
+    } else if (userGuess == " ") {
+        alert("Please choose a number between 1-10.")
+    } else {
+        alert("Please choose a number between 1-10.")
+    }
+    
+}
+
+if (userGuess != 5) {
+    alert("The number I was thinking of was 5!")
+}
+
+
+
 // Ask user their name and respond with greeting
-var guessedCorrectly = 0;
+
+//COMMMENTED OUT THE PREVIOUS EXERCISE SO I COULD FOCUS ON THE GUESSING A NUMBER EXERCISE
+
+/* var guessedCorrectly = 0;
 var userName = prompt("Hello!  What is your name?")
 alert(`Nice to meet you ${userName}`);
 
@@ -40,4 +69,5 @@ alert(`Wow!  You really know me.  ${userName} it looks like you guessed correctl
     alert(`You did OK.  But you can learn more about me`)
 }
 
-console.log(`The user guessed correctly ${guessedCorrectly} times.`)
+console.log(`The user guessed correctly ${guessedCorrectly} times.`) */
+
