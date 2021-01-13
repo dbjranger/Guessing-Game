@@ -1,0 +1,14 @@
+/* starts with an element to select, key value pairs for speicific element properties*/
+
+body {
+  padding: 20px;
+  
+}
+
+h1 {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+
