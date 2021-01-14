@@ -1,14 +1,20 @@
 "use strict";
 
+
+//  Loop to ask user up to 4 times to guess a number
 for (var numberOfGuesses = 0; numberOfGuesses < 4; numberOfGuesses++) {
   var userGuess = prompt(
     "Let's play a game.  I'm thinking of a number between 1-10.  What number am I thinking of?"
   );
 
+  // Taking the user's answer and converting to a number
   userGuess = parseInt(userGuess);
 
+  // Displaying user's guess in the console
   console.log(userGuess);
 
+
+ //  The number to guess is 5.  User receives higher or lower based on response.  
   if (userGuess == 5) {
     alert("Holy smokes!  How in the world did you know that?");
     break;
@@ -23,6 +29,7 @@ for (var numberOfGuesses = 0; numberOfGuesses < 4; numberOfGuesses++) {
   }
 }
 
+// If the user does not guess correctly after 4 times it shows the answer. 
 if (userGuess != 5) {
   alert("The number I was thinking of was 5!");
 }
