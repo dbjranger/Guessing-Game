@@ -1,30 +1,31 @@
-'use strict';
+"use strict";
 
-for (var numberOfGuesses = 0; numberOfGuesses < 4; numberOfGuesses ++) {
-    
-    var userGuess = prompt("Let's play a game.  I'm thinking of a number between 1-10.  What number am I thinking of?")
-    
-    
-if (userGuess == 5) {
-        alert("Holy smokes!  How in the world did you know that?")
-        numberOfGuesses += 5;
-    } else if (userGuess > 5) {
-        alert("Nope!  Too high.  Guess a lower number.")
-    } else if (userGuess < 5) {
-        alert("Nope!  Too low.  Guess a higher number")
-    } else if (userGuess == " ") {
-        alert("Please choose a number between 1-10.")
-    } else {
-        alert("Please choose a number between 1-10.")
-    }
-    
+for (var numberOfGuesses = 0; numberOfGuesses < 4; numberOfGuesses++) {
+  var userGuess = prompt(
+    "Let's play a game.  I'm thinking of a number between 1-10.  What number am I thinking of?"
+  );
+
+  userGuess = parseInt(userGuess);
+
+  console.log(userGuess);
+
+  if (userGuess == 5) {
+    alert("Holy smokes!  How in the world did you know that?");
+    break;
+  } else if (userGuess == "" || userGuess == null) {
+    alert("TEST SCENARIO");
+  } else if (userGuess > 5) {
+    alert("Nope!  Too high.  Guess a lower number.");
+  } else if (userGuess < 5 && userGuess != null) {
+    alert("Nope!  Too low.  Guess a higher number");
+  } else {
+    alert("Please choose a number between 1-10.");
+  }
 }
 
 if (userGuess != 5) {
-    alert("The number I was thinking of was 5!")
+  alert("The number I was thinking of was 5!");
 }
-
-
 
 // Ask user their name and respond with greeting
 
@@ -70,4 +71,3 @@ alert(`Wow!  You really know me.  ${userName} it looks like you guessed correctl
 }
 
 console.log(`The user guessed correctly ${guessedCorrectly} times.`) */
-
