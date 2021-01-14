@@ -3,49 +3,15 @@
 //SECOND GUESSING GAME
 
 // I have the answer key and also another variable correctlyAnswered which acts a boolean to know when to show the correct answers
-var answer = [ 1, 3, 7, 10];
+var answer = [1, 3, 7, 10];
 var correctlyAnswered = false;
+var userScoreCorrect = 0;
+var totalNumberOfQuestions = 0;
 
 // user gets 6 guesses before being told the correct answer
 for (var numberOfGuesses = 0; numberOfGuesses < 6; numberOfGuesses++) {
-  var userGuess = prompt("Let's play a game.  I'm thinking of a number between 1-10.  What number am I thinking of?");
-
-  // Taking the user's answer and converting to a number
-  userGuess = parseInt(userGuess);
-
-  // Displaying user's guess in the console
-  console.log(userGuess);
-
-
- //  The if statement checks for the answers in the array and also protects against junk inputs 
-      if (userGuess == answer[0] || userGuess == answer[1] || userGuess == answer[2] || userGuess == answer[3]) {
-        alert("Holy smokes!  How in the world did you know that?");
-        correctlyAnswered = true;
-        break;
-      } else if (userGuess > 0) {
-        alert("Close, but no cigar.")
-      } else if (userGuess === "" || userGuess === null) {
-        alert("Don't be lame!  Please choose a number between 1-10");
-      } else {
-        alert("What are you doing??!!  Please choose a number between 1-10.");
-      }
-}
-
-
-// After a correct answer we trigger our boolean variable to correct.  Therefore if that boolean is false we know that the user did choose the correct answer. 
-if (correctlyAnswered === false) {
-    alert("You're not very good at this good.  The correct answers are: " + answer[0] + ", " + answer[1] + ", " + answer[2] + ", " + answer[3])
-}
-
-
-
-//  1st GUESSING GAME EXERCISE
-
-
-//  Loop to ask user up to 4 times to guess a number
-for (var numberOfGuesses = 0; numberOfGuesses < 4; numberOfGuesses++) {
   var userGuess = prompt(
-    "Let's play a game.  I'm thinking of a number between 1-10.  What number am I thinking of?"
+    "Let's start out by playing an easy game.  I'm thinking of 4 numbers between 1-10.  Can you guess one of them?"
   );
 
   // Taking the user's answer and converting to a number
@@ -54,26 +20,96 @@ for (var numberOfGuesses = 0; numberOfGuesses < 4; numberOfGuesses++) {
   // Displaying user's guess in the console
   console.log(userGuess);
 
+  //  The if statement checks for the answers in the array and also protects against junk inputs
+  if (
+    userGuess == answer[0] ||
+    userGuess == answer[1] ||
+    userGuess == answer[2] ||
+    userGuess == answer[3]
+  ) {
+    alert("Holy smokes!  How in the world did you know that?");
+    userScoreCorrect++;
+    totalNumberOfQuestions++;
+    correctlyAnswered = true;
+    break;
+  } else if (userGuess > 0) {
+    alert("Close, but no cigar.");
+    totalNumberOfQuestions++;
+  } else if (userGuess === "" || userGuess === null) {
+    alert("Don't be lame!  Please choose a number between 1-10");
+  } else {
+    alert("What are you doing??!!  Please choose a number between 1-10.");
+  }
+}
 
- //  The number to guess is 5.  User receives higher or lower based on response.  
+// After a correct answer we trigger our boolean variable to correct.  Therefore if that boolean is false we know that the user did choose the correct answer.
+if (correctlyAnswered === false) {
+  alert(
+    "You're not very good at this good.  The correct answers are: " +
+      answer[0] +
+      ", " +
+      answer[1] +
+      ", " +
+      answer[2] +
+      ", " +
+      answer[3]
+  );
+}
+
+
+
+
+//  1st GUESSING GAME EXERCISE-----------------------------------------------------------------------------------------
+
+//  Loop to ask user up to 4 times to guess a number
+for (var numberOfGuesses = 0; numberOfGuesses < 4; numberOfGuesses++) {
+  var userGuess = prompt(
+    "Ok, the first game was easy.  Let's play again only this time I'm thinking of only 1 number between 1-10.  What number am I thinking of?"
+  );
+
+  // Taking the user's answer and converting to a number
+  userGuess = parseInt(userGuess);
+
+  // Displaying user's guess in the console
+  console.log(userGuess);
+
+  //  The number to guess is 5.  User receives higher or lower based on response.
   if (userGuess == 5) {
+    userScoreCorrect++;
+    totalNumberOfQuestions++;
     alert("Holy smokes!  How in the world did you know that?");
     break;
   } else if (userGuess == "" || userGuess == null) {
     alert("Please choose a number between 1-10");
   } else if (userGuess > 5) {
+    totalNumberOfQuestions++;  
     alert("Nope!  Too high.  Guess a lower number.");
   } else if (userGuess < 5) {
+    totalNumberOfQuestions++;
     alert("Nope!  Too low.  Guess a higher number");
   } else {
     alert("Please choose a number between 1-10.");
   }
 }
 
-// If the user does not guess correctly after 4 times it shows the answer. 
+// If the user does not guess correctly after 4 times it shows the answer.
 if (userGuess != 5) {
   alert("The number I was thinking of was 5!");
 }
+
+
+//Give the user their final score
+alert("You answered " + userScoreCorrect + " correct out of " + totalNumberOfQuestions);
+
+
+
+
+
+
+
+
+
+
 
 
 
