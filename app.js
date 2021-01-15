@@ -56,50 +56,52 @@ if (correctlyAnswered === false) {
   );
 }
 
-
+guessNumber();
 
 
 //  1st GUESSING GAME EXERCISE-----------------------------------------------------------------------------------------
 
-//  Loop to ask user up to 4 times to guess a number
-for (var numberOfGuesses = 0; numberOfGuesses < 4; numberOfGuesses++) {
-  var userGuess = prompt(
-    "Ok, the first game was easy.  Let's play again only this time I'm thinking of only 1 number between 1-10.  What number am I thinking of?"
-  );
-
-  // Taking the user's answer and converting to a number
-  userGuess = parseInt(userGuess);
-
-  // Displaying user's guess in the console
-  console.log(userGuess);
-
-  //  The number to guess is 5.  User receives higher or lower based on response.
-  if (userGuess == 5) {
-    userScoreCorrect++;
-    totalNumberOfQuestions++;
-    alert("Holy smokes!  How in the world did you know that?");
-    break;
-  } else if (userGuess == "" || userGuess == null) {
-    alert("Please choose a number between 1-10");
-  } else if (userGuess > 5) {
-    totalNumberOfQuestions++;  
-    alert("Nope!  Too high.  Guess a lower number.");
-  } else if (userGuess < 5) {
-    totalNumberOfQuestions++;
-    alert("Nope!  Too low.  Guess a higher number");
-  } else {
-    alert("Please choose a number between 1-10.");
-  }
-}
-
-// If the user does not guess correctly after 4 times it shows the answer.
-if (userGuess != 5) {
-  alert("The number I was thinking of was 5!");
-}
-
 
 //Give the user their final score
 alert("You answered " + userScoreCorrect + " correct out of " + totalNumberOfQuestions);
+
+function guessNumber() {
+  //  Loop to ask user up to 4 times to guess a number
+  for (var numberOfGuesses = 0; numberOfGuesses < 4; numberOfGuesses++) {
+    var userGuess = prompt(
+      "Ok, the first game was easy.  Let's play again only this time I'm thinking of only 1 number between 1-10.  What number am I thinking of?"
+    );
+  
+    // Taking the user's answer and converting to a number
+    userGuess = parseInt(userGuess);
+  
+    // Displaying user's guess in the console
+    console.log(userGuess);
+  
+    //  The number to guess is 5.  User receives higher or lower based on response.
+    if (userGuess == 5) {
+      userScoreCorrect++;
+      totalNumberOfQuestions++;
+      alert("Holy smokes!  How in the world did you know that?");
+      break;
+    } else if (userGuess == "" || userGuess == null) {
+      alert("Please choose a number between 1-10");
+    } else if (userGuess > 5) {
+      totalNumberOfQuestions++;  
+      alert("Nope!  Too high.  Guess a lower number.");
+    } else if (userGuess < 5) {
+      totalNumberOfQuestions++;
+      alert("Nope!  Too low.  Guess a higher number");
+    } else {
+      alert("Please choose a number between 1-10.");
+    }
+  }
+  
+  // If the user does not guess correctly after 4 times it shows the answer.
+  if (userGuess != 5) {
+    alert("The number I was thinking of was 5!");
+  }
+  }
 
 
 
