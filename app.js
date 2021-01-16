@@ -105,20 +105,8 @@ function guessNumber() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-//COMMMENTED OUT THE PREVIOUS EXERCISE SO I COULD FOCUS ON THE GUESSING A NUMBER EXERCISE--------------------
 // Ask user their name and respond with greeting
-/* var guessedCorrectly = 0;
+var guessedCorrectly = 0;
 var userName = prompt("Hello!  What is your name?")
 alert(`Nice to meet you ${userName}`);
 
@@ -157,4 +145,4 @@ alert(`Wow!  You really know me.  ${userName} it looks like you guessed correctl
     alert(`You did OK.  But you can learn more about me`)
 }
 
-console.log(`The user guessed correctly ${guessedCorrectly} times.`) */
+console.log(`The user guessed correctly ${guessedCorrectly} times.`)
